@@ -546,99 +546,98 @@ textarea.form-control {
     .project-card {
         max-width: 100%;
     }
+    
+    /* Text responsiveness only */
+    #loop {
+        font-size: 60px;
+    }
+    
+    #page > h3 {
+        font-size: 14px;
+        width: 30%;
+    }
+    
+    #page > h4 {
+        font-size: 14px;
+        left: 300px;
+    }
+    
+    #page1 > #right-text > h1,
+    #page2 > #text1 > h1,
+    #page1 > #left-text > h1 {
+        font-size: 32px;
+    }
+    
+    #page1 > #right-text > h3,
+    #page2 > #text1 > h3,
+    #page1 > #left-text > h3,
+    #page2 > #text2 > p,
+    #page3 > #text3 > h3 {
+        font-size: 14px;
+    }
+
+    #page1 > #right-text{
+        position: absolute;
+        top: 10%;      /* Mengatur jarak dari atas */
+        right: 55%;    /* Mengatur jarak dari kanan */
+        text-align: start;
+    }
+
+    #page1 > #left-text{
+        position: absolute;
+        top: 35%;      /* Mengatur jarak dari atas */
+        right: 11%;    /* Mengatur jarak dari kanan */
+        text-align: end;
+    }
+
+    #page2 > #text1{
+        position: absolute;
+        top: 20%;      /* Mengatur jarak dari atas */
+        right: 65%;    /* Mengatur jarak dari kanan */
+        text-align: start;
+    }
+
+    #page2 > #text2{
+        position: absolute;
+        top: 65%;      /* Mengatur jarak dari atas */
+        right: 10%;    /* Mengatur jarak dari kanan */
+        text-align: end;
+    }
+
+    #page3 > #text3 {
+        position: absolute;
+        top: 20%;      /* Mengatur jarak dari atas */
+        right: 10%;    /* Mengatur jarak dari kanan */
+        text-align: end;
+    }
+
+    #page3 > #text3 > h1 {
+        font-size: 45px;
+    }
+    
+    #nav > h3 {
+        font-size: 18px;
+    }
+    
+    #nav > button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
 }
 
-        /* Footer Styling */
-        footer {
-            background-color: var(--dark-primary);
-            color: #ffffff;
-            padding: 50px 0 20px;
-            position: relative;
-        }
+/* Extra small devices */
+@media (max-width: 480px) {
+    #loop {
+        font-size: 40px;
+    }
     
-        footer .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            text-align: center;
-        }
+    #page1 > #right-text > h1,
+    #page2 > #text1 > h1,
+    #page1 > #left-text > h1 {
+        font-size: 26px;
+    }
     
-        .social-links {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-            margin-bottom: 30px;
-            gap: 20px;
-        }
-    
-        .social-links li a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: #ffffff;
-            font-size: 18px;
-            transition: all 0.3s ease;
-        }
-    
-        .social-links li a:hover {
-            background-color: var(--accent-color);
-            color: var(--dark-primary);
-            transform: translateY(-5px);
-        }
-    
-        .back-to-top {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background-color: var(--accent-color);
-            color: var(--dark-primary);
-            border-radius: 50%;
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-    
-        .back-to-top:hover {
-            background-color: #ffffff;
-            transform: translateX(-50%) translateY(-5px);
-        }
-    
-        footer p {
-            font-size: 14px;
-            margin-top: 20px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-    
-        /* Script untuk tahun dinamis di footer */
-        #year:after {
-            content: attr(data-year);
-        }
-    
-        /* Responsive footer */
-        @media (max-width: 768px) {
-            .social-links {
-                gap: 15px;
-            }
-            
-            .social-links li a {
-                width: 35px;
-                height: 35px;
-                font-size: 16px;
-            }
-            
-            .back-to-top {
-                width: 40px;
-                height: 40px;
-            }
-        }
+    #page3 > #text3 > h1 {
+        font-size: 36px;
+    }
+}

@@ -389,8 +389,21 @@ function scaleImage(img, ctx) {
   var hRatio = canvas.width / img.width;
   var vRatio = canvas.height / img.height;
   var ratio = Math.max(hRatio, vRatio);
+
+  // Set different scale factor based on screen width
+  var scaleFactor = window.innerWidth <= 768 ? 0.7 : 1;
+  ratio = ratio * scaleFactor;
+
   var centerShift_x = (canvas.width - img.width * ratio) / 2;
   var centerShift_y = (canvas.height - img.height * ratio) / 2;
+
+  var offsetX = 0;
+  // Adjust offsetY for smaller screens
+  var offsetY = window.innerWidth <= 768 ? 140 : 0;
+  
+  centerShift_x += offsetX;
+  centerShift_y += offsetY;
+
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(
     img,
