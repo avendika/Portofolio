@@ -484,12 +484,12 @@
             };
 
             // Mengirim form dengan parameter yang sesuai template
-            emailjs.send('service_5ubbzvr', 'template_zydws6e', templateParams)
+            emailjs.send('service_5ubbzvr', 'template_o0hvzn5', templateParams)
                 .then(function (response) {
                     alert('Pesan berhasil dikirim! Terima kasih sudah menghubungi.');
                     document.getElementById('contactForm').reset();
                 }, function (error) {
-                    alert('Gagal mengirim pesan. Silakan coba lagi nanti.');
+                    alert('Gagal mengirim pesan. Detail Error: ' + (error.text || JSON.stringify(error)));
                     console.error('Gagal:', error);
                 })
                 .finally(() => {
