@@ -454,5 +454,33 @@ gsap.to("#page3",{
     pin:true,
     scroller:`#main`
   }
-})
+});
+
+// Theme Toggle Functionality
+const themeToggle = document.getElementById("themeToggle");
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("cyberpunk");
+    const isCyberpunk = document.body.classList.contains("cyberpunk");
+    
+    // Save theme preference to localStorage
+    localStorage.setItem("theme", isCyberpunk ? "cyberpunk" : "default");
+    
+    // Update button icon
+    const icon = themeToggle.querySelector("i");
+    if (isCyberpunk) {
+      icon.className = "fas fa-sun";
+    } else {
+      icon.className = "fas fa-moon";
+    }
+  });
+
+  // Load saved theme on initialization
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "cyberpunk") {
+    document.body.classList.add("cyberpunk");
+    const icon = themeToggle.querySelector("i");
+    if (icon) icon.className = "fas fa-sun";
+  }
+}
 
